@@ -12,7 +12,11 @@ import categoriasRouter from "./routes/categorias_incidencia.js";
 import "dotenv/config";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // permite cualquier origen
+  })
+);
 app.use(express.json());
 
 // prueba conexión
